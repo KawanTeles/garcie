@@ -2,25 +2,18 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
-import { Benefits } from './components/Benefits';
 import { Modalities } from './components/Modalities';
 import { Timetable } from './components/Timetable';
-import { Professors } from './components/Professors';
-import { Structure } from './components/Structure';
-import { Results } from './components/Results';
-import { Testimonials } from './components/Testimonials';
-import { Gallery } from './components/Gallery';
-import { InstagramSection } from './components/InstagramSection';
-import { Location } from './components/Location';
-import { FAQ } from './components/FAQ';
+import { StructureGallery } from './components/StructureGallery';
 import { CTAFinal } from './components/CTAFinal';
+import { ContactLocation } from './components/ContactLocation';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export const App: React.FC = () => {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
-  const [selectedModality, setSelectedModality] = useState<string>('Jiu-Jitsu Iniciante (Fundamentos)');
+  const [selectedModality, setSelectedModality] = useState<string>('Jiu-Jitsu Iniciante');
 
   const handleOpenBooking = (modalityTitle?: string) => {
     if (modalityTitle) {
@@ -35,38 +28,43 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#08090C] text-[#F3F4F6] selection:bg-[#EAB308] selection:text-black">
-      {/* Navigation */}
-      <Navbar onOpenBooking={handleOpenBooking} />
+      {/* 1. Header Minimalista */}
+      <Navbar onOpenBooking={() => handleOpenBooking()} />
 
-      {/* Main Content */}
+      {/* 2. Hero Direto & Forte */}
       <main id="main-content">
         <Hero onOpenBooking={() => handleOpenBooking()} />
+
+        {/* 3. Sobre a Academia (Breve & Objetivo) */}
         <About />
-        <Benefits />
+
+        {/* 4. Modalidades Claras */}
         <Modalities onOpenBooking={handleOpenBooking} />
+
+        {/* 5. Grade de Horários (Modalidade -> Dia -> Horário) */}
         <Timetable onOpenBooking={handleOpenBooking} />
-        <Professors />
-        <Structure />
-        <Results />
-        <Testimonials />
-        <Gallery />
-        <InstagramSection />
-        <Location />
-        <FAQ />
+
+        {/* 6. Galeria / Estrutura (Imagens reais em destaque) */}
+        <StructureGallery />
+
+        {/* 7. CTA de Conversão */}
         <CTAFinal onOpenBooking={() => handleOpenBooking()} />
+
+        {/* 8. Contato & Localização Concentrados */}
+        <ContactLocation />
       </main>
 
-      {/* Footer */}
+      {/* 9. Footer Simples */}
       <Footer />
 
-      {/* Interactive Booking Modal */}
+      {/* Modal de Agendamento Interativo */}
       <BookingModal
         isOpen={bookingModalOpen}
         onClose={handleCloseBooking}
         selectedModality={selectedModality}
       />
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Botão Flutuante de WhatsApp */}
       <FloatingWhatsApp />
     </div>
   );
