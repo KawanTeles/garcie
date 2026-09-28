@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="gracieGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+    <linearGradient id="gracieGoldDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15"/>
+      <stop offset="100%" stop-color="#A16207"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Triangle -->
+  <polygon points="50,6 94,84 6,84" fill="url(#gracieGoldGrad)" stroke="#EAB308" stroke-width="1.5" stroke-linejoin="round"/>
+  
+  <!-- Inner Dark Triangle Background -->
+  <polygon points="50,19 82,78 18,78" fill="#0A0C13"/>
+  
+  <!-- Gracie Internal Geometry & Stylized BJJ Triangle Cutouts -->
+  <polygon points="50,27 75,73 50,73" fill="url(#gracieGoldGrad)"/>
+  <polygon points="50,44 32,73 45,73" fill="#FFFFFF"/>
+  <circle cx="50" cy="58" r="4.5" fill="#0A0C13"/>
+  
+  <!-- Bottom Baseline accent -->
+  <rect x="22" y="87" width="56" height="3" rx="1.5" fill="url(#gracieGoldGrad)"/>
+</svg>

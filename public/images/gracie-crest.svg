@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="crestGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#EAB308"/>
+      <stop offset="100%" stop-color="#CA8A04"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Gold Rings -->
+  <circle cx="80" cy="80" r="76" stroke="url(#crestGold)" stroke-width="3" fill="#090B10"/>
+  <circle cx="80" cy="80" r="70" stroke="url(#crestGold)" stroke-width="1" stroke-dasharray="3,3" fill="none" opacity="0.6"/>
+  <circle cx="80" cy="80" r="56" stroke="url(#crestGold)" stroke-width="1.5" fill="#0C101A"/>
+  
+  <!-- Circular Text Paths -->
+  <path id="circlePathTop" d="M 28 80 A 52 52 0 0 1 132 80" fill="none"/>
+  <path id="circlePathBottom" d="M 132 80 A 52 52 0 0 1 28 80" fill="none"/>
+  
+  <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="8.5" fill="#FFFFFF" letter-spacing="2.5">
+    <textPath href="#circlePathTop" startOffset="50%" text-anchor="middle">
+      ACADEMIA GRACIE
+    </textPath>
+  </text>
+  
+  <text font-family="'Montserrat', sans-serif" font-weight="800" font-size="7.5" fill="url(#crestGold)" letter-spacing="2">
+    <textPath href="#circlePathBottom" startOffset="50%" text-anchor="middle">
+      • DESDE 1925 •
+    </textPath>
+  </text>
+  
+  <!-- Center Triangle -->
+  <g transform="translate(50, 48)">
+    <polygon points="30,4 56,52 4,52" fill="url(#crestGold)" stroke="#EAB308" stroke-width="1.2" stroke-linejoin="round"/>
+    <polygon points="30,13 50,48 10,48" fill="#0A0C13"/>
+    <polygon points="30,18 45,45 30,45" fill="url(#crestGold)"/>
+    <polygon points="30,29 19,45 27,45" fill="#FFFFFF"/>
+    <circle cx="30" cy="36" r="2.8" fill="#0A0C13"/>
+  </g>
+</svg>
